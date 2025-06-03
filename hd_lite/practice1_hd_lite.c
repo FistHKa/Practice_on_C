@@ -39,8 +39,8 @@ int main(int argc, char **argv)
 
     FILE *file = fopen(argv[1], "rb");
     if (!file) {
-        fprintf("Error opening file %s", argv[1]);
-        perror(fopen);
+        fprintf(stderr, "Error opening file %s", argv[1]);
+        perror("fopen");
         return 2;
     }
 
