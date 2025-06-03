@@ -6,7 +6,7 @@
 
 void print_hex_and_ascii_line(size_t offset, const unsigned char *buffer, size_t count)
 {
-    printf("%08zx", offset);
+    printf("%08zx ", offset);
 
     for (size_t i = 0; i < BYTES_PER_LINE; i++) {
         if (i < count)
@@ -27,7 +27,7 @@ void print_hex_and_ascii_line(size_t offset, const unsigned char *buffer, size_t
             printf(".");
     }
 
-    printf("\n");
+    printf("|\n");
 }
 
 int main(int argc, char **argv) 
